@@ -1,14 +1,6 @@
 "use client"
 
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle
-} from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@radix-ui/react-label";
 
@@ -22,29 +14,6 @@ export function LoginForm() {
   })
 
   return (
-    // <div className="w-[30%] h-[30%] mt-7">
-    //   <Card>
-    //     <CardHeader className="space-y-1">
-    //       <CardTitle className="text-2xl">Login</CardTitle>
-    //       <CardDescription>
-    //         Enter your email and password to login
-    //       </CardDescription>
-    //     </CardHeader>
-    //     <CardContent className="grid gap-4">
-    //       <div className="grid gap-2" >
-    //         <Label htmlFor="email">Email</Label>
-    //         <Input id="email" type="email" placeholder="test@example.com" />
-    //       </div>
-    //       <div className="grid gap-2" >
-    //         <Label htmlFor="password">Password</Label>
-    //         <Input id="password" type="password" />
-    //       </div>
-    //     </CardContent>
-    //     <CardFooter>
-    //       <Button className="w-full">Login</Button>
-    //     </CardFooter>
-    //   </Card>
-    // </div>
     <div className="mx-auto flex w-96 flex-col justify-center sapce-y-6">
       <div className="flex flex-col space-y-2 text-center">
         <h1 className="text-2xl font-semibold tracking-tight">
