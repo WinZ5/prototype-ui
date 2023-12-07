@@ -19,15 +19,12 @@ export function LoginForm() {
         <h1 className="text-2xl font-semibold tracking-tight">
           Login
         </h1>
-        <p className="text-sm text-muted-foreground">
-          Enter your email and password below to login.
-        </p>
       </div>
       <div className="grid gap-6">
         <form onSubmit={onSubmit}>
           <div className="grid gap-2">
-            <div className="grid gap-1 mt-3">
-              <Label className="sr-only" htmlFor="email">
+            <div className="grid gap-1 mt-6">
+              <Label className="text-sm font-medium" htmlFor="email">
                 Email
               </Label>
               <Input
@@ -40,7 +37,7 @@ export function LoginForm() {
               />
             </div>
             <div className="grid gap-1 mt-3">
-              <Label className="sr-only" htmlFor="email">
+              <Label className="text-sm font-medium" htmlFor="password">
                 Password
               </Label>
               <Input
