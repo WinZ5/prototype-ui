@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 
 export default function Project() {
   return (
-    <div className="h-full flex-1 flex-col space-y-8 p-8">
+    <div className="h-full w-4/5 flex-1 flex-col space-y-8 p-8 m-auto">
       <div className="flex items-center justify-between space-y-2">
         <div>
           <h2 className="text-2xl font-bold tracking-tight">
