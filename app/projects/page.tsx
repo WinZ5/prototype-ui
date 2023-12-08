@@ -1,4 +1,9 @@
 import { UserProfile } from "../components/userprofile";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: 'Projects'
+}
 
 export default function Project() {
   return (
