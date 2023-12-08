@@ -8,7 +8,17 @@ export const metadata: Metadata = {
 export default function Project() {
   return (
     <div className="h-full flex-1 flex-col space-y-8 p-8">
-      <UserProfile className="flex items-center justify-end space-x-2" />
+      <div className="flex items-center justify-between space-y-2">
+        <div>
+          <h2 className="text-2xl font-bold tracking-tight">
+            Welcome to Projects page
+          </h2>
+          <p className="text-muted-foreground">
+            Here&apos;s a list of your projects.
+          </p>
+        </div>
+        <UserProfile className="flex items-center space-x-2" />
+      </div>
     </div>
   )
 }
