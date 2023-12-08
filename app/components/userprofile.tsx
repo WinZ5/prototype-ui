@@ -51,7 +51,9 @@ export function UserProfile(props: { className?: string }) {
           <DropdownMenuGroup>
             <Dialog>
               <DialogTrigger asChild>
-                <DropdownMenuItem onSelect={(e) => e.preventDefault()}>Profile</DropdownMenuItem>
+                <DropdownMenuItem onSelect={(e) => e.preventDefault()}>
+                  Profile
+                </DropdownMenuItem>
               </DialogTrigger>
               <DialogContent>
                 <DialogHeader>
