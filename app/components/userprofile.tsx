@@ -13,13 +13,9 @@ import {
   AvatarFallback,
 } from "@/components/ui/avatar";
 
-interface UserProfileProps extends React.HTMLAttributes<HTMLDivElement> {
-  className?: string;
-}
-
-export function UserProfile({ className }: UserProfileProps) {
+export function UserProfile(props: {className?: string}) {
   return (
-    <div className={className}>
+    <div className={props.className}>
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button variant="ghost" className="relative h-8 w-8 rounded-full">
