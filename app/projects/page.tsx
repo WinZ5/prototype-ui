@@ -1,4 +1,5 @@
 import { UserProfile } from "../components/userprofile";
+import { Dashboard } from "../components/dashboard";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -18,6 +19,12 @@ export default function Project() {
           </p>
         </div>
         <UserProfile className="flex items-center space-x-2" />
+      </div>
+      <div className="flex-1 space-y-4">
+        <h2 className="text-3xl font-bold tracking-tight">
+          Dashboard
+        </h2>
+        <Dashboard />
       </div>
     </div>
   )
