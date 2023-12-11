@@ -8,7 +8,7 @@ import {
 export function Dashboard(props: { className?: string }) {
   return (
     <div className={props.className}>
-      <Tabs defaultValue="overview" className="space-y-4">
+      <Tabs defaultValue="before" className="space-y-4">
         <TabsList>
           <TabsTrigger value="before">
             Before
