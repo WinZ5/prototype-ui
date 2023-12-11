@@ -38,21 +38,52 @@ import Link from "next/link";
 
 import { DataTableColumnHeader } from "./datatableheader";
 
-export type objective = {
+export type risk = {
+  okr: string
   id: string
+  category: string
   description: string
-  officer: string
+  factor: string
+  inherent: number
+  residual: number
 }
 
-export const columns: ColumnDef<objective>[] = [
+export const columns: ColumnDef<risk>[] = [
+  {
+    accessorKey: "okr",
+    header: ({ column }) => (
+      <DataTableColumnHeader column={column} title="OKR" />
+    ),
+    cell: ({ row }) => (
+      <div className="capitalize">{row.getValue("okr")}</div>
+    ),
+  },
   {
     accessorKey: "id",
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title="ID" />
     ),
     cell: ({ row }) => (
-      <Link href={"/risks/" + row.getValue("id")} className="capitalize">{row.getValue("id")}</Link>
+      <div className="capitalize">{row.getValue("id")}</div>
     ),
+  },
+  {
+    accessorKey: "factor",
+    header: ({ column }) => (
+      <DataTableColumnHeader column={column} title="Factor" />
+    ),
+    cell: ({ row }) => (
+      <div>{row.getValue("factor")}</div>
+    )
+  },
+  {
+    accessorKey: "category",
+    header: ({ column }) => (
+      <DataTableColumnHeader column={column} title="Category" />
+    ),
+    cell: ({ row }) => (
+      <div>{row.getValue("category")}</div>
+    )
   },
   {
     accessorKey: "description",
@@ -60,16 +91,25 @@ export const columns: ColumnDef<objective>[] = [
       <DataTableColumnHeader column={column} title="Description" />
     ),
     cell: ({ row }) => (
-      <Link href={"/risks/" + row.getValue("id")}>{row.getValue("description")}</Link>
+      <div>{row.getValue("description")}</div>
     )
   },
   {
-    accessorKey: "officer",
+    accessorKey: "inherent",
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Officer" />
+      <DataTableColumnHeader column={column} title="Inherent Risk" />
     ),
     cell: ({ row }) => (
-      <div>{row.getValue("officer")}</div>
+      <div>{row.getValue("inherent")}</div>
+    )
+  },
+  {
+    accessorKey: "residual",
+    header: ({ column }) => (
+      <DataTableColumnHeader column={column} title="Residual Risk" />
+    ),
+    cell: ({ row }) => (
+      <div>{row.getValue("residual")}</div>
     )
   },
   {
@@ -103,7 +143,7 @@ export const columns: ColumnDef<objective>[] = [
   }
 ]
 
-export function Objectivetable(props: { data: objective[] }) {
+export function Risktable(props: { data: risk[] }) {
   const data = props.data
   const [sorting, setSorting] = useState<SortingState>([])
   const [columnFilters, setColumnFilters] = useState<ColumnFiltersState>([])
@@ -171,7 +211,7 @@ export function Objectivetable(props: { data: objective[] }) {
             size="sm"
             className="h-10 ml-3"
           >
-            Add Objective
+            Add Risks
           </Button>
         </div>
       </div>
