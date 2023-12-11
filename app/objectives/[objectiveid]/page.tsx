@@ -1,6 +1,11 @@
 import { UserNav } from "@/app/components/usernav";
 import { UserProfile } from "@/app/components/userprofile";
 import { Objectivetable, objective } from "@/app/components/objectivetable";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: 'Objectives'
+}
 
 export default function Objective({ params }: { params: { objectiveid: string } }) {
   const data: objective[] = [

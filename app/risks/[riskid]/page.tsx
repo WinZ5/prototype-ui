@@ -1,5 +1,10 @@
-import { UserProfile } from "@/app/components/userprofile"
-import { Risktable, risk } from "@/app/components/risktable"
+import { UserProfile } from "@/app/components/userprofile";
+import { Risktable, risk } from "@/app/components/risktable";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: 'Risks'
+}
 
 export default function Risks({ params }: { params: { riskid: string } }) {
   const data: risk[] = [

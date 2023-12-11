@@ -1,6 +1,11 @@
 import { UserProfile } from "@/app/components/userprofile";
 import { UserNav } from "@/app/components/usernav";
 import { Dashboard } from "@/app/components/dashboard";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: 'Departments'
+}
 
 export default function Department({params}: {params: {departmentid: string}}) {
   return (
