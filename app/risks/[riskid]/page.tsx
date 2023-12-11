@@ -33,7 +33,7 @@ export default function Risks({ params }: { params: { riskid: string } }) {
   ]
 
   return (
-    <div className="h-full w-4/5 flex-1 flex-col space-y-8 p-8 m-auto">
+    <div className="h-full max-w-[1400px] flex-1 flex-col space-y-8 p-8 m-auto">
       <div className="flex items-center justify-end space-y-2">
         <UserProfile className="flex items-center space-x-2" />
       </div>

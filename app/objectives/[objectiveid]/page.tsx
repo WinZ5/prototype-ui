@@ -22,7 +22,7 @@ export default function Objective({ params }: { params: { objectiveid: string } 
   ]
 
   return (
-    <div className="h-full w-4/5 flex-1 flex-col space-y-8 p-8 m-auto">
+    <div className="h-full max-w-[1400px] flex-1 flex-col space-y-8 p-8 m-auto">
       <div className="border-b">
         <div className="flex items-center justify-between space-y-2">
           <div>
