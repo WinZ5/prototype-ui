@@ -1,5 +1,5 @@
 import { UserProfile } from "../components/userprofile";
-import Cardlist from "../components/cardlist";
+import { Cardlist } from "../components/cardlist";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -7,9 +7,12 @@ export const metadata: Metadata = {
 }
 
 export default function Project() {
-  const departments = [
-    "HR",
-    "Finance"
+  const company = [
+    "Tesle",
+    "SpaceY",
+    "MyTube",
+    "Twister",
+    "UPhone"
   ]
 
   return (
@@ -26,7 +29,7 @@ export default function Project() {
         <UserProfile className="flex items-center space-x-2" />
       </div>
       <div className="flex-1 space-y-4 pt-6">
-        <Cardlist list={departments} />
+        <Cardlist list={company} new="Create new Company" />
       </div>
     </div>
   )

@@ -7,7 +7,7 @@ export function Cardlist(props: { list: Array<string>, new: string }) {
   const router = useRouter()
 
   const onClick = ((event: React.MouseEvent<HTMLElement>, href: string) => {
-    router.push(`/projects/${href}`)
+    router.push(`/departments/${href}`)
   })
   const listitems = props.list.map((card) =>
     <Button onClick={(e) => onClick(e, card)}>
