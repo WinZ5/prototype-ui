@@ -230,7 +230,7 @@ export function Objectivetable(props: { data: objective[] }) {
             variant="outline"
             size="sm"
             onClick={() => table.previousPage()}
-            disabled={!table.getCanPreviousPage}
+            disabled={!table.getCanPreviousPage()}
           >
             Previous
           </Button>
@@ -238,7 +238,7 @@ export function Objectivetable(props: { data: objective[] }) {
             variant="outline"
             size="sm"
             onClick={() => table.nextPage()}
-            disabled={!table.getCanNextPage}
+            disabled={!table.getCanNextPage()}
           >
             Next
           </Button>
